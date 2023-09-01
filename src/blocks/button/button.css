@@ -1,0 +1,27 @@
+.button {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 70%;
+  border: none;
+  padding: 0;
+}
+
+.button_type_open {
+  background-image: url(../../images/plus.svg);
+}
+
+.button_type_close {
+  background-image: url(../../images/minus.svg);
+}
+
+.button_color_blue {
+  background-color: #3877EE;
+}
+
+.button_color_green {
+  background-color: #6ABF4B;
+}
