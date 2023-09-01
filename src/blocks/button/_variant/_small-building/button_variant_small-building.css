@@ -1,0 +1,28 @@
+.button_variant_small-building {
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  left: 375px;
+  right: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .button_variant_small-building {
+    top: 232px;
+    left: 443px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .button_variant_small-building {
+    top: 251px;
+    left: 466px;
+  }
+}
+
+@media screen and (min-width: 1785px) {
+  .button_variant_small-building {
+    top: 270px;
+    left: 466px;
+  }
+}
