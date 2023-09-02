@@ -4,9 +4,6 @@
 
 @import url(./blocks/button/button.css);
 
-@import url(./blocks/button/_type/_plus/button_type_plus.css);
-@import url(./blocks/button/_type/_minus/button_type_minus.css);
-
 @import url(./blocks/button/_color/_blue/button_color_blue.css);
 @import url(./blocks/button/_color/_green/button_color_green.css);
 
