@@ -26,3 +26,17 @@
     left: 466px;
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .button_variant_small-building {
+    top: 323px;
+    left: 597px;
+  }
+}
+
+@media screen and (min-width: 2260px) {
+  .button_variant_small-building {
+    top: 350px;
+    left: 597px;
+  }
+}
