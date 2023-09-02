@@ -22,13 +22,7 @@ window.addEventListener('click', (evt) => {
     }
 
   } else {
-    const img = openedButton.querySelector('img');
-    img.src = '../src/images/plus.svg';
-    img.alt = 'открыть описание';
-    const span = openedButton.querySelector('span');
-    span.textContent = '';
-    span.classList.remove('button__description_open');
-
+    closeButton(openedButton);
     openedButton = null;
   }
 })
@@ -40,4 +34,13 @@ function openButton(target, textOfSpan) {
   const span = target.querySelector('span');
   span.textContent = textOfSpan;
   span.classList.add('button__description_open');
+}
+
+function closeButton(openedButton) {
+  const img = openedButton.querySelector('img');
+  img.src = '../src/images/plus.svg';
+  img.alt = 'открыть описание';
+  const span = openedButton.querySelector('span');
+  span.textContent = '';
+  span.classList.remove('button__description_open');
 }
