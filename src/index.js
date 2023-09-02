@@ -1,25 +1,30 @@
-const template = document.querySelector('#template');
+let openedButton = null;
 
 window.addEventListener('click', (evt) => {
-  let target = evt.target;
+  if (openedButton === null) {
+    let target = evt.target;
 
-  const smallBuilding = target.classList.contains('button_variant_small-building');
-  const smallBuildingOpened = target.classList.contains('button-opened_variant_small-building');
+    const smallBuilding = target.classList.contains('button_variant_small-building');
 
-  if (smallBuilding) {
-    const templateItem = template.content.cloneNode(true);
-    const div = templateItem.querySelector('div');
-    div.classList.add('button_color_blue','button-opened_variant_small-building');
-    const span = templateItem.querySelector('span');
-    span.textContent = 'Здание';
+    if (smallBuilding) {
+      const img = target.querySelector('img');
+      img.src = '../src/images/minus.svg';
+      img.alt = 'закрыть описание';
+      const span = target.querySelector('span');
+      span.textContent = 'Здание';
+      span.classList.add('button__description_open');
 
-    target.replaceWith(templateItem);
-  }
+      openedButton = target;
+    }
+  } else {
+    const img = openedButton.querySelector('img');
+    img.src = '../src/images/plus.svg';
+    img.alt = 'открыть описание';
+    const span = openedButton.querySelector('span');
+    span.textContent = '';
+    span.classList.remove('button__description_open');
 
-  if (smallBuildingOpened) {
-    const div = document.createElement('div');
-    div.classList.add('button', 'button_type_plus', 'button_color_blue', 'button_variant_small-building');
-    target.replaceWith(div);
+    openedButton = null;
   }
 
 })
