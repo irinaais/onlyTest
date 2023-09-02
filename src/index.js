@@ -9,7 +9,7 @@ window.addEventListener('click', (evt) => {
   if (smallBuilding) {
     const templateItem = template.content.cloneNode(true);
     const div = templateItem.querySelector('div');
-    div.classList.add('button-opened_color_blue','button-opened_variant_small-building');
+    div.classList.add('button_color_blue','button-opened_variant_small-building');
     const span = templateItem.querySelector('span');
     span.textContent = 'Здание';
 

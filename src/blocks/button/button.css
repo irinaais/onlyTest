@@ -21,10 +21,6 @@
   align-items: center;
 }
 
-.button-opened_color_blue {
-  background-color: rgb(56 119 238 / .7);
-}
-
 .button-opened_variant_small-building {
   position: absolute;
   top: 200px;
