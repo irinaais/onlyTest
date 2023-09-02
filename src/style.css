@@ -10,3 +10,7 @@
 @import url(./blocks/button/_variant/_small-building/button_variant_small-building.css);
 @import url(./blocks/button/_variant/_stadium/button_variant_stadium.css);
 @import url(./blocks/button/_variant/_bridge/button_variant_bridge.css);
+
+@import url(./blocks/button/__description/button__description.css);
+
+@import url(./blocks/button/__description/_open/button__description_open.css);
