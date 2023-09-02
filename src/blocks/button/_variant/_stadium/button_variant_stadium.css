@@ -1,0 +1,35 @@
+.button_variant_stadium {
+  position: absolute;
+  top: 335px;
+  bottom: 0;
+  left: 642px;
+  right: 0;
+}
+
+@media screen and (min-width: 1536px) {
+  .button_variant_stadium {
+    top: 435px;
+    left: 785px;
+  }
+}
+
+@media screen and (min-width: 1785px) {
+  .button_variant_stadium {
+    top: 527px;
+    left: 920px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .button_variant_stadium {
+    top: 578px;
+    left: 1059px;
+  }
+}
+
+@media screen and (min-width: 2260px) {
+  .button_variant_stadium {
+    top: 628px;
+    left: 1221px;
+  }
+}
