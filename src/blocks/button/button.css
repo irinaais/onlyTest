@@ -1,10 +1,65 @@
 .button {
   width: 41px;
   height: 41px;
-  border-radius: 50%;
+  border-radius: 40px;
   background-size: 10px;
   background-repeat: no-repeat;
   background-position: center;
   border: none;
   padding: 0;
+}
+
+.button-opened {
+  padding: 11px 15px;
+  border: none;
+  border-radius: 40px;
+  height: 38px;
+  width: fit-content;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-opened_color_blue {
+  background-color: rgb(56 119 238 / .7);
+}
+
+.button-opened_variant_small-building {
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  left: 375px;
+  right: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .button-opened_variant_small-building {
+    top: 232px;
+    left: 443px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .button-opened_variant_small-building {
+    top: 251px;
+    left: 466px;
+  }
+}
+
+@media screen and (min-width: 1785px) {
+  .button-opened_variant_small-building {
+    top: 270px;
+    left: 466px;
+  }
+}
+
+.button-opened__description {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+
+  margin-left: 15px;
 }
