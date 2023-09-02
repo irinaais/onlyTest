@@ -1,5 +1,9 @@
 let openedButton = null;
 
+//TODO вынести в отдельный файл
+const smallBuildingDescription = 'Здание';
+const stadiumDescription = 'Стадион';
+
 window.addEventListener('click', (evt) => {
   if (openedButton === null) {
     let target = evt.target;
@@ -8,24 +12,12 @@ window.addEventListener('click', (evt) => {
     const stadium = target.classList.contains('button_variant_stadium');
 
     if (smallBuilding) {
-      const img = target.querySelector('img');
-      img.src = '../src/images/minus.svg';
-      img.alt = 'закрыть описание';
-      const span = target.querySelector('span');
-      span.textContent = 'Здание';
-      span.classList.add('button__description_open');
-
+      openButton(target, smallBuildingDescription);
       openedButton = target;
     }
 
     if (stadium) {
-      const img = target.querySelector('img');
-      img.src = '../src/images/minus.svg';
-      img.alt = 'закрыть описание';
-      const span = target.querySelector('span');
-      span.textContent = 'Стадион';
-      span.classList.add('button__description_open');
-
+      openButton(target, stadiumDescription);
       openedButton = target;
     }
 
@@ -40,3 +32,12 @@ window.addEventListener('click', (evt) => {
     openedButton = null;
   }
 })
+
+function openButton(target, textOfSpan) {
+  const img = target.querySelector('img');
+  img.src = '../src/images/minus.svg';
+  img.alt = 'закрыть описание';
+  const span = target.querySelector('span');
+  span.textContent = textOfSpan;
+  span.classList.add('button__description_open');
+}
