@@ -7,7 +7,6 @@ window.addEventListener('click', (evt) => {
   const smallBuildingOpened = target.classList.contains('button-opened_variant_small-building');
 
   if (smallBuilding) {
-    console.log('smallBuilding');
     const templateItem = template.content.cloneNode(true);
     const div = templateItem.querySelector('div');
     div.classList.add('button-opened_color_blue','button-opened_variant_small-building');
@@ -18,7 +17,6 @@ window.addEventListener('click', (evt) => {
   }
 
   if (smallBuildingOpened) {
-    console.log('smallBuildingOpened');
     const div = document.createElement('div');
     div.classList.add('button', 'button_type_plus', 'button_color_blue', 'button_variant_small-building');
     target.replaceWith(div);
