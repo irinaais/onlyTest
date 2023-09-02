@@ -19,9 +19,9 @@ window.addEventListener('click', (evt) => {
 
   if (smallBuildingOpened) {
     console.log('smallBuildingOpened');
-    const button = document.createElement('button');
-    button.classList.add('button', 'button_type_open', 'button_color_blue', 'button_variant_small-building');
-    target.replaceWith(button);
+    const div = document.createElement('div');
+    div.classList.add('button', 'button_type_plus', 'button_color_blue', 'button_variant_small-building');
+    target.replaceWith(div);
   }
 
 })
