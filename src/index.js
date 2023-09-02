@@ -3,6 +3,7 @@ let openedButton = null;
 //TODO вынести в отдельный файл
 const smallBuildingDescription = 'Здание';
 const stadiumDescription = 'Стадион';
+const bridgeDescription = 'Мост';
 
 window.addEventListener('click', (evt) => {
   if (openedButton === null) {
@@ -10,6 +11,7 @@ window.addEventListener('click', (evt) => {
 
     const smallBuilding = target.classList.contains('button_variant_small-building');
     const stadium = target.classList.contains('button_variant_stadium');
+    const bridge = target.classList.contains('button_variant_bridge');
 
     if (smallBuilding) {
       openButton(target, smallBuildingDescription);
@@ -18,6 +20,11 @@ window.addEventListener('click', (evt) => {
 
     if (stadium) {
       openButton(target, stadiumDescription);
+      openedButton = target;
+    }
+
+    if (bridge) {
+      openButton(target, bridgeDescription);
       openedButton = target;
     }
 

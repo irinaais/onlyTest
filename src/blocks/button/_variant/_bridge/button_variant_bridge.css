@@ -1,0 +1,49 @@
+.button_variant_bridge {
+  position: absolute;
+  top: 490px;
+  bottom: 0;
+  left: 305px;
+  right: 0;
+}
+
+@media screen and (min-width: 1376px) {
+  .button_variant_bridge {
+    top: 542px;
+    left: 310px;
+  }
+}
+
+@media screen and (min-width: 1473px) {
+  .button_variant_bridge {
+    top: 577px;
+    left: 359px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .button_variant_bridge {
+    top: 597px;
+    left: 373px;
+  }
+}
+
+@media screen and (min-width: 1693px) {
+  .button_variant_bridge {
+    top: 665px;
+    left: 419px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .button_variant_bridge {
+    top: 752px;
+    left: 488px;
+  }
+}
+
+@media screen and (min-width: 2190px) {
+  .button_variant_bridge {
+    top: 870px;
+    left: 550px;
+  }
+}
