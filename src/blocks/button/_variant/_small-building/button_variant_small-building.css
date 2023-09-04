@@ -1,42 +1,7 @@
 .button_variant_small-building {
   position: absolute;
-  top: 200px;
+  top: 15vw;
   bottom: 0;
-  left: 375px;
+  left: 30vw;
   right: 0;
-}
-
-@media screen and (min-width: 1440px) {
-  .button_variant_small-building {
-    top: 232px;
-    left: 443px;
-  }
-}
-
-@media screen and (min-width: 1536px) {
-  .button_variant_small-building {
-    top: 251px;
-    left: 466px;
-  }
-}
-
-@media screen and (min-width: 1785px) {
-  .button_variant_small-building {
-    top: 270px;
-    left: 466px;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .button_variant_small-building {
-    top: 323px;
-    left: 597px;
-  }
-}
-
-@media screen and (min-width: 2260px) {
-  .button_variant_small-building {
-    top: 350px;
-    left: 597px;
-  }
 }
