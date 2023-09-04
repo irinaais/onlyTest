@@ -8,6 +8,7 @@ const flatDescription = 'Квартиры';
 const museumDescription = 'Музей';
 const showroomDescription = 'Выставочный зал';
 const administrationDescription = 'Администрация';
+const office1Description = 'Офис 1';
 
 window.addEventListener('click', (evt) => {
   if (openedButton === null) {
@@ -20,6 +21,7 @@ window.addEventListener('click', (evt) => {
     const museum = target.classList.contains('button_variant_museum');
     const showroom = target.classList.contains('button_variant_showroom');
     const administration = target.classList.contains('button_variant_administration');
+    const office1 = target.classList.contains('button_variant_office1');
 
     if (smallBuilding) {
       openButton(target, smallBuildingDescription);
@@ -53,6 +55,11 @@ window.addEventListener('click', (evt) => {
 
     if (administration) {
       openButton(target, administrationDescription);
+      openedButton = target;
+    }
+
+    if (office1) {
+      openButton(target, office1Description);
       openedButton = target;
     }
 

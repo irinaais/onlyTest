@@ -14,6 +14,7 @@
 @import url(./blocks/button/_variant/_museum/button_variant_museum.css);
 @import url(./blocks/button/_variant/_showroom/button_variant_showroom.css);
 @import url(./blocks/button/_variant/_administration/button_variant_administration.css);
+@import url(./blocks/button/_variant/_office1/button_variant_office1.css);
 
 @import url(./blocks/button/__description/button__description.css);
 
