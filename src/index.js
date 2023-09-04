@@ -5,6 +5,7 @@ const smallBuildingDescription = 'Здание';
 const stadiumDescription = 'Стадион';
 const bridgeDescription = 'Мост';
 const flatDescription = 'Квартиры';
+const museumDescription = 'Музей';
 
 window.addEventListener('click', (evt) => {
   if (openedButton === null) {
@@ -14,6 +15,7 @@ window.addEventListener('click', (evt) => {
     const stadium = target.classList.contains('button_variant_stadium');
     const bridge = target.classList.contains('button_variant_bridge');
     const flat = target.classList.contains('button_variant_flat');
+    const museum = target.classList.contains('button_variant_museum');
 
     if (smallBuilding) {
       openButton(target, smallBuildingDescription);
@@ -32,6 +34,11 @@ window.addEventListener('click', (evt) => {
 
     if (flat) {
       openButton(target, flatDescription);
+      openedButton = target;
+    }
+
+    if (museum) {
+      openButton(target, museumDescription);
       openedButton = target;
     }
 
