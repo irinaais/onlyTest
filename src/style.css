@@ -12,6 +12,7 @@
 @import url(./blocks/button/_variant/_bridge/button_variant_bridge.css);
 @import url(./blocks/button/_variant/_flat/button_variant_flat.css);
 @import url(./blocks/button/_variant/_museum/button_variant_museum.css);
+@import url(./blocks/button/_variant/_showroom/button_variant_showroom.css);
 
 @import url(./blocks/button/__description/button__description.css);
 
