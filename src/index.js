@@ -11,7 +11,7 @@ const office1Description = 'Офис 1';
 const office2Description = 'Офис 2';
 const apartmentsDescription = 'Апартаменты';
 
-window.addEventListener('click', (evt) => {
+document.addEventListener('click', (evt) => {
   if (openedButton === null) {
     let target = evt.target;
 
