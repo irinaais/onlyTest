@@ -1,6 +1,5 @@
 let openedButton = null;
 
-//TODO вынести в отдельный файл
 const smallBuildingDescription = 'Здание';
 const stadiumDescription = 'Стадион';
 const bridgeDescription = 'Мост';
