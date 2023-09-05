@@ -26,6 +26,8 @@ document.addEventListener('click', (evt) => {
     const office2 = target.classList.contains('button_variant_office2');
     const apartments = target.classList.contains('button_variant_apartments');
 
+    const plusImg = target.classList.contains('img_type_plus');
+
     if (smallBuilding) {
       openButton(target, smallBuildingDescription);
       openedButton = target;
@@ -74,6 +76,58 @@ document.addEventListener('click', (evt) => {
     if (apartments) {
       openButton(target, apartmentsDescription);
       openedButton = target;
+    }
+
+    if (plusImg) {
+      if (target.parentNode.classList.contains('button_variant_small-building')) {
+        openButton(target.parentNode, smallBuildingDescription);
+        openedButton = target.parentNode;
+      }
+
+      if (target.parentNode.classList.contains('button_variant_stadium')) {
+        openButton(target.parentNode, stadiumDescription);
+        openedButton = target.parentNode;
+      }
+
+      if (target.parentNode.classList.contains('button_variant_bridge')) {
+        openButton(target.parentNode, bridgeDescription);
+        openedButton = target.parentNode;
+      }
+
+      if (target.parentNode.classList.contains('button_variant_flat')) {
+        openButton(target.parentNode, flatDescription);
+        openedButton = target.parentNode;
+      }
+
+      if (target.parentNode.classList.contains('button_variant_museum')) {
+        openButton(target.parentNode, museumDescription);
+        openedButton = target.parentNode;
+      }
+
+      if (target.parentNode.classList.contains('button_variant_showroom')) {
+        openButton(target.parentNode, showroomDescription);
+        openedButton = target.parentNode;
+      }
+
+      if (target.parentNode.classList.contains('button_variant_administration')) {
+        openButton(target.parentNode, administrationDescription);
+        openedButton = target.parentNode;
+      }
+
+      if (target.parentNode.classList.contains('button_variant_office1')) {
+        openButton(target.parentNode, office1Description);
+        openedButton = target.parentNode;
+      }
+
+      if (target.parentNode.classList.contains('button_variant_office2')) {
+        openButton(target.parentNode, office2Description);
+        openedButton = target.parentNode;
+      }
+
+      if (target.parentNode.classList.contains('button_variant_apartments')) {
+        openButton(target.parentNode, apartmentsDescription);
+        openedButton = target.parentNode;
+      }
     }
 
   } else {
