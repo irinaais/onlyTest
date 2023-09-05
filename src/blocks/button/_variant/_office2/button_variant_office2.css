@@ -1,7 +1,6 @@
 .button_variant_office2 {
   position: absolute;
-  top: 37vw;
-  bottom: 0;
-  left: 82vw;
-  right: 0;
+  top: 68%;
+  left: 84%;
+  transform: translate(-50%, -50%);
 }

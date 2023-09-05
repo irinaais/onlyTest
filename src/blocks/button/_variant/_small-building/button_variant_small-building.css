@@ -1,7 +1,6 @@
 .button_variant_small-building {
   position: absolute;
-  top: 15vw;
-  bottom: 0;
-  left: 30vw;
-  right: 0;
+  top: 29%;
+  left: 31%;
+  transform: translate(-50%, -50%);
 }

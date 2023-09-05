@@ -1,7 +1,6 @@
 .button_variant_flat {
   position: absolute;
-  top: 11vw;
-  bottom: 0;
-  left: 71vw;
-  right: 0;
+  top: 22%;
+  left: 73%;
+  transform: translate(-50%, -50%);
 }

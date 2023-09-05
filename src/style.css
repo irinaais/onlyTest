@@ -1,5 +1,7 @@
 @import url(./vendor/normalize.css);
 
+@import url(./blocks/map/map.css);
+
 @import url(./blocks/background/background.css);
 
 @import url(./blocks/button/button.css);
