@@ -30,103 +30,83 @@ document.addEventListener('click', (evt) => {
 
     if (smallBuilding) {
       openButton(target, smallBuildingDescription);
-      openedButton = target;
     }
 
     if (stadium) {
       openButton(target, stadiumDescription);
-      openedButton = target;
     }
 
     if (bridge) {
       openButton(target, bridgeDescription);
-      openedButton = target;
     }
 
     if (flat) {
       openButton(target, flatDescription);
-      openedButton = target;
     }
 
     if (museum) {
       openButton(target, museumDescription);
-      openedButton = target;
     }
 
     if (showroom) {
       openButton(target, showroomDescription);
-      openedButton = target;
     }
 
     if (administration) {
       openButton(target, administrationDescription);
-      openedButton = target;
     }
 
     if (office1) {
       openButton(target, office1Description);
-      openedButton = target;
     }
 
     if (office2) {
       openButton(target, office2Description);
-      openedButton = target;
     }
 
     if (apartments) {
       openButton(target, apartmentsDescription);
-      openedButton = target;
     }
 
     if (plusImg) {
       if (target.parentNode.classList.contains('button_variant_small-building')) {
         openButton(target.parentNode, smallBuildingDescription);
-        openedButton = target.parentNode;
       }
 
       if (target.parentNode.classList.contains('button_variant_stadium')) {
         openButton(target.parentNode, stadiumDescription);
-        openedButton = target.parentNode;
       }
 
       if (target.parentNode.classList.contains('button_variant_bridge')) {
         openButton(target.parentNode, bridgeDescription);
-        openedButton = target.parentNode;
       }
 
       if (target.parentNode.classList.contains('button_variant_flat')) {
         openButton(target.parentNode, flatDescription);
-        openedButton = target.parentNode;
       }
 
       if (target.parentNode.classList.contains('button_variant_museum')) {
         openButton(target.parentNode, museumDescription);
-        openedButton = target.parentNode;
       }
 
       if (target.parentNode.classList.contains('button_variant_showroom')) {
         openButton(target.parentNode, showroomDescription);
-        openedButton = target.parentNode;
       }
 
       if (target.parentNode.classList.contains('button_variant_administration')) {
         openButton(target.parentNode, administrationDescription);
-        openedButton = target.parentNode;
       }
 
       if (target.parentNode.classList.contains('button_variant_office1')) {
         openButton(target.parentNode, office1Description);
-        openedButton = target.parentNode;
       }
 
       if (target.parentNode.classList.contains('button_variant_office2')) {
         openButton(target.parentNode, office2Description);
-        openedButton = target.parentNode;
       }
 
       if (target.parentNode.classList.contains('button_variant_apartments')) {
         openButton(target.parentNode, apartmentsDescription);
-        openedButton = target.parentNode;
       }
     }
 
@@ -143,6 +123,7 @@ function openButton(target, textOfSpan) {
   const span = target.querySelector('span');
   span.textContent = textOfSpan;
   span.classList.add('button__description_open');
+  openedButton = target;
 }
 
 function closeButton(openedButton) {
