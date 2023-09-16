@@ -1,15 +1,19 @@
-let openedButton = null;
+const buildingsDescriptions = {
+    'small-building': 'Здание',
+    stadium: 'Стадион',
+    bridge: 'Мост',
+    flat: 'Квартиры',
+    museum: 'Музей',
+    showroom: 'Выставочный зал',
+    administration: 'Администрация',
+    office1: 'Офис 1',
+    office2: 'Офис 2',
+    apartments: 'Апартаменты'
+}
 
-const smallBuildingDescription = 'Здание';
-const stadiumDescription = 'Стадион';
-const bridgeDescription = 'Мост';
-const flatDescription = 'Квартиры';
-const museumDescription = 'Музей';
-const showroomDescription = 'Выставочный зал';
-const administrationDescription = 'Администрация';
-const office1Description = 'Офис 1';
-const office2Description = 'Офис 2';
-const apartmentsDescription = 'Апартаменты';
+const buttonPrefix = 'button_variant_';
+
+let openedButton = null;
 
 document.addEventListener('click', (evt) => {
   if (openedButton === null) {
@@ -17,45 +21,13 @@ document.addEventListener('click', (evt) => {
     const button = target.closest('.button');
 
     if (button != null) {
-      if (button.classList.contains('button_variant_small-building')) {
-        openButton(button, smallBuildingDescription);
-      }
+      const arr = Array.from(button.classList);
 
-      if (button.classList.contains('button_variant_stadium')) {
-        openButton(button, stadiumDescription);
-      }
+      const buttonClassVariant = arr.find(i => i.startsWith(buttonPrefix));
+      const variant = buttonClassVariant.slice(buttonPrefix.length);
+      const description = buildingsDescriptions[variant];
 
-      if (button.classList.contains('button_variant_bridge')) {
-        openButton(button, bridgeDescription);
-      }
-
-      if (button.classList.contains('button_variant_flat')) {
-        openButton(button, flatDescription);
-      }
-
-      if (button.classList.contains('button_variant_museum')) {
-        openButton(button, museumDescription);
-      }
-
-      if (button.classList.contains('button_variant_showroom')) {
-        openButton(button, showroomDescription);
-      }
-
-      if (button.classList.contains('button_variant_administration')) {
-        openButton(button, administrationDescription);
-      }
-
-      if (button.classList.contains('button_variant_office1')) {
-        openButton(button, office1Description);
-      }
-
-      if (button.classList.contains('button_variant_office2')) {
-        openButton(button, office2Description);
-      }
-
-      if (button.classList.contains('button_variant_apartments')) {
-        openButton(button, apartmentsDescription);
-      }
+      openButton(button, description);
     }
   } else {
     closeButton(openedButton);
