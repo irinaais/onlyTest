@@ -16,22 +16,22 @@ const buttonPrefix = 'button_variant_';
 let openedButton = null;
 
 document.addEventListener('click', (evt) => {
-  if (openedButton === null) {
-    const target = evt.target;
-    const button = target.closest('.button');
-
-    if (button != null) {
-      const arr = Array.from(button.classList);
-
-      const buttonClassVariant = arr.find(i => i.startsWith(buttonPrefix));
-      const variant = buttonClassVariant.slice(buttonPrefix.length);
-      const description = buildingsDescriptions[variant];
-
-      openButton(button, description);
-    }
-  } else {
+  if (openedButton !== null) {
     closeButton(openedButton);
     openedButton = null;
+  }
+
+  const target = evt.target;
+  const button = target.closest('.button');
+
+  if (button != null) {
+    const arr = Array.from(button.classList);
+
+    const buttonClassVariant = arr.find(i => i.startsWith(buttonPrefix));
+    const variant = buttonClassVariant.slice(buttonPrefix.length);
+    const description = buildingsDescriptions[variant];
+
+    openButton(button, description);
   }
 })
 
