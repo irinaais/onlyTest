@@ -19,6 +19,8 @@ document.addEventListener('click', (evt) => {
   const target = evt.target;
   const button = target.closest('.button');
 
+  if ((button === null) && (openedButton !== null)) closeButton(openedButton);
+
   if (button != null) {
     // Если нажата та же кнопка, что уже открыта - закрываем ее
     if (button === openedButton) {
