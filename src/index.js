@@ -1,14 +1,14 @@
 const buildingsDescriptions = {
-    'small-building': 'Здание',
-    stadium: 'Стадион',
-    bridge: 'Мост',
-    flat: 'Квартиры',
-    museum: 'Музей',
-    showroom: 'Выставочный зал',
-    administration: 'Администрация',
-    office1: 'Офис 1',
-    office2: 'Офис 2',
-    apartments: 'Апартаменты'
+  'small-building': 'Здание',
+  stadium: 'Стадион',
+  bridge: 'Мост',
+  flat: 'Квартиры',
+  museum: 'Музей',
+  showroom: 'Выставочный зал',
+  administration: 'Администрация',
+  office1: 'Офис 1',
+  office2: 'Офис 2',
+  apartments: 'Апартаменты'
 }
 
 const buttonPrefix = 'button_variant_';
@@ -16,17 +16,24 @@ const buttonPrefix = 'button_variant_';
 let openedButton = null;
 
 document.addEventListener('click', (evt) => {
-  if (openedButton !== null) {
-    closeButton(openedButton);
-    openedButton = null;
-  }
-
   const target = evt.target;
   const button = target.closest('.button');
 
   if (button != null) {
-    const arr = Array.from(button.classList);
+    // Если нажата та же кнопка, что уже открыта - закрываем ее
+    if (button === openedButton) {
+      closeButton(openedButton);
+      openedButton = null;
+      return;  // Прерываем выполнение, чтобы не открывать кнопку снова
+    }
 
+    // Если есть другая открытая кнопка, закрываем ее
+    if (openedButton !== null) {
+      closeButton(openedButton);
+    }
+
+    // Открываем новую кнопку
+    const arr = Array.from(button.classList);
     const buttonClassVariant = arr.find(i => i.startsWith(buttonPrefix));
     const variant = buttonClassVariant.slice(buttonPrefix.length);
     const description = buildingsDescriptions[variant];
