@@ -1,0 +1,25 @@
+@import url(../vendor/normalize.css);
+
+@import url(blocks/map/map.css);
+
+@import url(blocks/background/background.css);
+
+@import url(blocks/button/button.css);
+
+@import url(blocks/button/_color/_blue/button_color_blue.css);
+@import url(blocks/button/_color/_green/button_color_green.css);
+
+@import url(blocks/button/_variant/_small-building/button_variant_small-building.css);
+@import url(blocks/button/_variant/_stadium/button_variant_stadium.css);
+@import url(blocks/button/_variant/_bridge/button_variant_bridge.css);
+@import url(blocks/button/_variant/_flat/button_variant_flat.css);
+@import url(blocks/button/_variant/_museum/button_variant_museum.css);
+@import url(blocks/button/_variant/_showroom/button_variant_showroom.css);
+@import url(blocks/button/_variant/_administration/button_variant_administration.css);
+@import url(blocks/button/_variant/_office1/button_variant_office1.css);
+@import url(blocks/button/_variant/_office2/button_variant_office2.css);
+@import url(blocks/button/_variant/_apartments/button_variant_apartments.css);
+
+@import url(blocks/button/__description/button__description.css);
+
+@import url(blocks/button/__description/_open/button__description_open.css);
